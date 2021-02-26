@@ -1,0 +1,22 @@
+{%extends 'index.html' %} {% block content %}
+<div align="center">
+
+<div class="card" style="width: 18rem">
+      
+  <div class="card-body">
+    <figure class="image is-50x50">
+        <img src="http://openweathermap.org/img/w/{{ weather_data.icon }}.png" alt="Image"/>
+      </figure>
+
+    <h5 class="card-title"> {{ weather_data.city_name }}</h5>
+
+    <br />
+    <span class="subtitle">Temperature : &nbsp;&nbsp;&nbsp;&nbsp; {{ weather_data.current_temperature }} K</span></br>
+    <span class="subtitle">Pressure : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ weather_data.current_pressure }}° F</span></br>
+    <span class="subtitle">Humidity : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ weather_data.current_humidity }}° F</span></br>
+    <p class="card-text">Description : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{weather_data.weather_description}}</p>
+  </div>
+</div>
+</div>
+
+{% endblock %}
